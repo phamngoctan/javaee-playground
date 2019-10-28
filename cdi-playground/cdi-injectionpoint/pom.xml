@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tanpham.javaee.playground.cdiplayground</groupId>
-	<artifactId>cdi-beanmanager</artifactId>
+	<artifactId>cdi-injectionpoint</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Java EE 7 Sample: cdi - beanmanager</name>
+	<name>Java EE 7 Sample: cdi - injectionpoint</name>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -37,11 +37,6 @@
 				<groupId>org.jboss.arquillian.container</groupId>
 				<artifactId>arquillian-container-test-api</artifactId>
 				<version>${arquillian.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<version>1.4.197</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
