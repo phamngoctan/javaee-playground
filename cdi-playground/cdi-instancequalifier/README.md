@@ -1,22 +1,14 @@
-# CDI-injectionpoint
-Using injection point to extract the HttpServletRequest. Please see the following code snippet to get the idea of extracting information from HttpServletRequest.  
+# CDI-instancequalifier
+Using @Any annotation to get all the relative implementation of a Bean. Then, using javax.enterprise.util.AnnotationLiteral to get a specific implementation.  
+Also demo usage of org.hamcrest.Matchers.instanceOf
+
 ```java
-@Qualifier
-@Retention(RetentionPolicy.RUNTIME)
-public @interface HttpParam {
-    @Nonbinding public String value(); 
-}
+@Inject @Any
+private Instance<Greeting> instance;
+	
+// use Instance<T>#select()
+Instance<Greeting> businessInstance = instance.select(new AnnotationLiteral<Business>() {});
 
-// Extract the data from the http request
-@Produces
-@HttpParam("")
-@Dependent
-String getParamValue(InjectionPoint ip, HttpServletRequest req) {
-  return req.getParameter(ip.getAnnotated().getAnnotation(HttpParam.class).value());
-}
-
-// Usage
-@Inject
-@HttpParam("productId")
-String productId;
+assertThat(businessBean, instanceOf(FormalGreeting.class));
 ```
+
