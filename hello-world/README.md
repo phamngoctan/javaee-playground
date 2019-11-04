@@ -1,1 +1,1 @@
-# hello-world-wildfly-swarm
+# hello-world projects

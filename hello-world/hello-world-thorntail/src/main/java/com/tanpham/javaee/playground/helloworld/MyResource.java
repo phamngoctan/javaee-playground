@@ -18,4 +18,10 @@ public class MyResource {
         return Response.status(Status.ACCEPTED).entity(searchQueryParamValue).build();
     }
     
+    @GET
+    @Path("/messages")
+    @Produces("text/plain")
+    public Response doGet() {
+        return Response.ok("Hello from Thorntail!").build();
+    }
 }
