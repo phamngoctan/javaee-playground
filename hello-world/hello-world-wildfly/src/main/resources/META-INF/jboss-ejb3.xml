@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss:ejb-jar
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:jboss="http://www.jboss.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:s="urn:security"
+        version="3.1" impl-version="2.0">
+ 
+    <!-- <assembly-descriptor>
+        <s:security>
+            Bind all EJBs to the security domain
+            <ejb-name>*</ejb-name>
+            Name of the security domain which is configured in the EJB3 subsystem (see server-config/standalone.xml).
+            Note: Unfortunately only one security domain per ejb jar is supported.
+            <s:security-domain>xpertivySystemDbDomain</s:security-domain>
+        </s:security>
+        <security-role>
+        	<role-name>Everybody</role-name>
+        </security-role>
+    </assembly-descriptor> -->
+    
+    <!-- <assembly-descriptor>
+        <s:security>
+            Even wildcard * is supported
+            <ejb-name>SampleEJB</ejb-name>
+            Name of the security domain which is configured in the EJB3 subsystem
+            <s:security-domain>CustomSecurityDomain</s:security-domain>
+        </s:security>
+    </assembly-descriptor> -->
+</jboss:ejb-jar>
