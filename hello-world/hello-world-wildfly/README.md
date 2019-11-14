@@ -42,6 +42,28 @@ curl localhost:8080/hello-world-wildfly/api/hello-world
 At the very first version, the security-domain **"other"** is used to secure the REST API. At the very first test, it cached the login username/password after succesfully login in the first time.  
 That's why you can see the loginModule is just called once.
 
+In the wildfly, there is something like this:
+
+```xml
+<security-domain name="other" cache-type="default">
+    <authentication>
+        <login-module code="Remoting" flag="optional">
+            <module-option name="password-stacking" value="useFirstPass"/>
+        </login-module>
+        <login-module code="RealmDirect" flag="required">
+            <module-option name="password-stacking" value="useFirstPass"/>
+        </login-module>
+    </authentication>
+</security-domain>
+```
+That's why the block code below worked. Otherwise, it will throw exception "other security-domain not found... " something like that
+
+```xml
+<jboss-web>
+    <security-domain>other</security-domain>
+</jboss-web>
+```
+
 ## Reference
  - https://www.radcortez.com/custom-principal-and-loginmodule-for-wildfly/
  - https://github.com/radcortez/wildfly-custom-login-module
