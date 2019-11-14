@@ -64,6 +64,9 @@ That's why the block code below worked. Otherwise, it will throw exception "othe
 </jboss-web>
 ```
 
+Some additional notes:
+ - jboss-web.xml located in webapp/WEB-INF is the place for specifying the security-domain, the application needs to declare this to be secured.  
+
 ## Reference
  - https://www.radcortez.com/custom-principal-and-loginmodule-for-wildfly/
  - https://github.com/radcortez/wildfly-custom-login-module
