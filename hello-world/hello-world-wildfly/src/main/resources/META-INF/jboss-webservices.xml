@@ -1,0 +1,20 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<webservices version="1.0" xmlns="http://www.jboss.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss_webservices_1_0.xsd">
+
+	<context-root>demo_service</context-root>
+
+	<port-component>
+		<ejb-name>RemoteDemoService</ejb-name>
+		<auth-method>BASIC</auth-method>
+		<transport-guarantee>NONE</transport-guarantee>
+		<secure-wsdl-access>false</secure-wsdl-access>
+	</port-component>
+	<port-component>
+		<ejb-name>SystemDbDemoService</ejb-name>
+		<auth-method>BASIC</auth-method>
+		<transport-guarantee>NONE</transport-guarantee>
+		<secure-wsdl-access>false</secure-wsdl-access>
+	</port-component>
+</webservices> -->
