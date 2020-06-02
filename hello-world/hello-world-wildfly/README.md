@@ -1,4 +1,5 @@
 # hello-world-wildfly project
+This project also tries out with Microprofile API - the implementation in here I use Smallrye
 
 ## build
 mvn clean install
