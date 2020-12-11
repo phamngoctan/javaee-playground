@@ -4,5 +4,5 @@
 </jboss-web> -->
 
 <jboss-web>
-    <security-domain>other</security-domain>
+    <!-- <security-domain>other</security-domain> -->
 </jboss-web>

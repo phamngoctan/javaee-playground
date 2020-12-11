@@ -1,4 +1,5 @@
 # hello-world-wildfly project
+This project also tries out with Microprofile API - the implementation in here I use Smallrye
 
 ## build
 mvn clean install
@@ -63,6 +64,9 @@ That's why the block code below worked. Otherwise, it will throw exception "othe
     <security-domain>other</security-domain>
 </jboss-web>
 ```
+
+Some additional notes:
+ - jboss-web.xml located in webapp/WEB-INF is the place for specifying the security-domain, the application needs to declare this to be secured.  
 
 ## Reference
  - https://www.radcortez.com/custom-principal-and-loginmodule-for-wildfly/
